@@ -3,6 +3,7 @@ const createStore = redux.createStore;
 // console.log("welcome to redux");
 
 const Order_Pizza = "Order_Pizza";
+const Order_Burger = "Order_Burger";
 //Action in Redux
 // const action = {
 //   type: Order_Pizza,
@@ -14,6 +15,12 @@ function orderPizza() {
   return {
     type: Order_Pizza,
     shop_name: "Pizza Shop",
+  };
+}
+
+function orderBurger() {
+  return {
+    type: Order_Burger,
   };
 }
 
@@ -30,6 +37,11 @@ const reducer = (state = initialState, action) => {
       return {
         ...state, //for when an object has a lot of keys we copy the whole object
         pizzaBase: state.pizzaBase - 1, //and then only update what we need
+      };
+    case Order_Burger:
+      return {
+        ...state,
+        burgerBuns: state.burgerBuns - 1,
       };
     default:
       return state;
@@ -55,5 +67,8 @@ store.dispatch(orderPizza());
 store.dispatch(orderPizza());
 store.dispatch(orderPizza());
 store.dispatch(orderPizza());
+store.dispatch(orderBurger());
+store.dispatch(orderBurger());
+store.dispatch(orderBurger());
 unsubscribe();
 store.dispatch(orderPizza());
