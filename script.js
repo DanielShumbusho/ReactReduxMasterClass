@@ -20,7 +20,6 @@ function orderPizza() {
 //Reducer
 const initialState = {
   pizzaBase: 100,
-  burgerBuns: 200,
   //   toppings: ["cheese", "capsicum"],
 };
 
