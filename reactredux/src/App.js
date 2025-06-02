@@ -5,14 +5,16 @@ import store from "./components/redux/store";
 import HooksContainer from "./components/HooksContainer";
 import BurgerBox from "./components/BurgerBox";
 import CustomerChoice from "./components/CustomerChoice";
+import ProductsContainer from "./components/ProductsContainer";
 
 function App() {
   return (
     <Provider store={store}>
-      <PizzaBox />
+      {/* <PizzaBox /> */}
       {/* <HooksContainer /> */}
-      <BurgerBox />
-      <CustomerChoice />
+      {/* <BurgerBox /> */}
+      {/* <CustomerChoice /> */}
+      <ProductsContainer />
     </Provider>
   );
 }
