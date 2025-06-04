@@ -54,6 +54,11 @@ const reducerBurger = (state = initialStateForBurger, action) => {
         ...state,
         burgerBuns: state.burgerBuns - 1,
       };
+    case Order_Pizza:
+      return {
+        ...state,
+        burgerBuns: state.burgerBuns - 1, //now whenever we dispatch order pizza it will reduce on both pizza aand burger
+      };
     default:
       return state;
   }
